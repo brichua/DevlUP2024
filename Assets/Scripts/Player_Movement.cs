@@ -20,6 +20,7 @@ public class PlayerMovement : MonoBehaviour
     private Animator animator;
     private const string horizontal = "Horizontal";
     private const string vertical = "Vertical";
+    private const string Speed = "Speed";
 
 
 
@@ -37,6 +38,7 @@ public class PlayerMovement : MonoBehaviour
         movement.y = Input.GetAxisRaw("Vertical");
         animator.SetFloat(horizontal, movement.x);
         animator.SetFloat(vertical, movement.y);
+        animator.SetFloat(Speed, movement.sqrMagnitude);
  
 
     }
