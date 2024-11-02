@@ -3,7 +3,7 @@ using UnityEngine;
 using UnityEngine.UI;
 using TMPro;
 
-public class Herbs : MonoBehaviour
+public class Herbs : Interactable
 {
     public CanvasGroup fadePanel;
     public TextMeshProUGUI messageText;
@@ -15,13 +15,10 @@ public class Herbs : MonoBehaviour
     public static bool isPickedUp = true;
     public static bool appeared = false;
 
-    void Update()
+    public override void Interact()
     {
-        if (playerInRange && Input.GetKeyDown(KeyCode.E) && !isPickedUp)
-        {
-            isPickedUp = true;
-            StartCoroutine(PickupSequence());
-        }
+        base.Interact();
+        StartCoroutine(PickupSequence());
     }
 
     IEnumerator PickupSequence()
@@ -61,19 +58,4 @@ public class Herbs : MonoBehaviour
         yield return StartCoroutine(FadeCanvasGroup(fadePanel, 1, 0, fadeDuration));
     }
 
-    private void OnTriggerEnter(Collider other)
-    {
-        if (other.CompareTag("Player"))
-        {
-            playerInRange = true;
-        }
-    }
-
-    private void OnTriggerExit(Collider other)
-    {
-        if (other.CompareTag("Player"))
-        {
-            playerInRange = false;
-        }
-    }
 }
