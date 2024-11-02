@@ -20,7 +20,7 @@ public class Hearth_Stats : MonoBehaviour
     IEnumerator CountDownHealth() 
     {
         // hold off for 36 seconds
-        yield return new WaitForSeconds(.5f);
+        yield return new WaitForSeconds(36f);
         RemoveHealth(1);
         CheckMood();
         StartCoroutine(CountDownHealth());
@@ -33,7 +33,7 @@ public class Hearth_Stats : MonoBehaviour
         {
             hearthLife = false;
         }
-        Debug.Log("Hooked on a feeling " + currentHealth);
+        Debug.Log("Hearth health is " + currentHealth);
     }
 
     public void AddHealth(int healing) 
