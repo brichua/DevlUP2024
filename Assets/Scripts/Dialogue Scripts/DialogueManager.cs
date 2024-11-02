@@ -33,7 +33,7 @@ public class DialogueManager : MonoBehaviour
     private Queue<string> inputStream = new Queue<string>(); // stores dialogue
 
     //To stop player movement
-    private PlayerMovement playerMovement;
+    public PlayerMovement playerMovement;
 
     [HideInInspector]
     public DialogueTrigger currentTrigger;

@@ -19,32 +19,53 @@ public class DialogueTrigger : MonoBehaviour
     public bool singleUseDialogue = false;
     [HideInInspector]
     public bool hasBeenUsed = false;
-    bool inArea = false;
+    public bool inArea = false;
+    public bool in_dialogue;
+    public bool trigger;
 
     // public bool useCollision; // unused for now
     //Differentiate between the NPCs
     public GameObject NPC;
+    string path = "Assets/Scripts/Dialogue Scripts/Dialogue Text.txt";
+    public NPC_Manager NPC_Manager;
 
+    //Interctible Sprite
+    public GameObject interactible_sprite;
 
     private void Start()
     {
         manager = FindObjectOfType<DialogueManager>();
         //Writer
-        /*string path = "Assets/Scripts/Starter Scripts/Dialogue/NPC_Interaction_1.txt";
-        using (var writer = new StreamWriter(path, false)){}
+        //Make sure file exists
+        if (!File.Exists(path))
+        {
+            Debug.Log("The file does not exist.");
+        }
         AssetDatabase.Refresh();
-        firstInteraction = true;
-        */
+        
     }
 
 
     private void Update()
     {
+        if (inArea && Input.GetKeyDown(KeyCode.E) && !in_dialogue) {
+            in_dialogue = true;
+            trigger = true;
+        }
         if (!hasBeenUsed && inArea && Input.GetKeyDown(KeyCode.E) && nextTime < Time.timeSinceLevelLoad)
         {
             //Debug.Log("Advance");
             nextTime = Time.timeSinceLevelLoad + waitTime;
             manager.AdvanceDialogue();
+        }
+        //Load Interactable Sprite
+        if (inArea && !in_dialogue)
+        {
+            interactible_sprite.SetActive(true);
+        }
+        else
+        {
+            interactible_sprite.SetActive(false);
         }
     }
 
@@ -95,14 +116,40 @@ public class DialogueTrigger : MonoBehaviour
 
     }
 
-    public void UpdateText(string charName, string moodState)
+    public void UpdateText(string charName, int moodState, bool short_text)
     {
-        string path = "Assets/Scripts/Starter Scripts/Dialogue/Dialogue Text.txt";
-        using (var writer = new StreamWriter(path, false))
+        if (charName == "JaVale Andoris")
         {
-            Debug.Log("Writing...");
-            writer.WriteLine("");
-            writer.Close();
+            //Happy
+            if (moodState == 4) {
+                if (short_text) {
+                    using (var writer = new StreamWriter(path, false))
+                    {
+                        writer.WriteLine("[NAME=JaVale Andoris][SPEAKERSPRITE=JaVale Andoris]Such a warm, lovely day outside! Perfect for choppin’ down some trees. Gotta find my axes though…");
+                        writer.Close();
+                    }
+                }
+                else
+                {
+                    using (var writer = new StreamWriter(path, false))
+                    {
+                        writer.Flush();
+                        writer.WriteLine("[NAME=JaVale Andoris][SPEAKERSPRITE=JaVale Andoris]Oh, it’s you Evelyn. How have you been doing?");
+                        writer.WriteLine("[NAME=Evelyn][SPEAKERSPRITE=Evelyn]Good Mr. Andoris! How about you!");
+                        writer.WriteLine("[NAME=JaVale Andoris][SPEAKERSPRITE=JaVale Andoris]I’m just my jolly old self per usual! The shop has been doing good and the missus isn’t yelling at me over laundry!");
+                        writer.WriteLine("[NAME=Evelyn][SPEAKERSPRITE=Evelyn]Haha, that’s good to hear.");
+                        writer.WriteLine("[NAME=JaVale Andoris][SPEAKERSPRITE=JaVale Andoris]How’s the good old fire job treatin’ ya? Hopefully it ain’t too much weight on your back.");
+                        writer.WriteLine("[NAME=Evelyn][SPEAKERSPRITE=Evelyn]Yeah, it’s going quite well so far. Didn’t expect to inherit it so quickly, but that’s how things are sometimes.");
+                        writer.WriteLine("[NAME=JaVale Andoris][SPEAKERSPRITE=JaVale Andoris]Ha, you can say that again! My dad had me cutting lumber before I knew how to say “Timber”! And you know I’m gonna be passing that tradition on to me boy.");
+                        writer.WriteLine("[NAME=Evelyn][SPEAKERSPRITE=Evelyn]Maybe you shouldn’t do that, he’s going to hate you.");
+                        writer.WriteLine("[NAME=JaVale Andoris][SPEAKERSPRITE=JaVale Andoris]Ahhhhahaha, I was only playin’ Evelyn, I got enough strong arms here to help me.");
+                        writer.WriteLine("[NAME=JaVale Andoris][SPEAKERSPRITE=JaVale Andoris]Welp, I won’t keep ya here, I know you got business to attend to. You can always swing by if you need good, strong lumber!");
+                        writer.WriteLine("[NAME=Evelyn][SPEAKERSPRITE=Evelyn]Thank you Mr. Andoris. Take care!");
+                        writer.Close();
+                    }
+                }
+            }
+            
         }
         AssetDatabase.Refresh();
     }
@@ -112,7 +159,7 @@ public class DialogueTrigger : MonoBehaviour
         if (other.gameObject.tag == "Player" && !hasBeenUsed)
         {
             manager.currentTrigger = this;
-            TriggerDialogue();
+            //if (in_dialogue) { TriggerDialogue(); }
             //Debug.Log("Collision");
         }
     }
@@ -121,6 +168,12 @@ public class DialogueTrigger : MonoBehaviour
         if (other.gameObject.tag == "Player")
         {
             inArea = true;
+            if (in_dialogue && trigger) {
+                //Check to see if dialogue needs to be updated
+                UpdateText(NPC.name, NPC_Manager.mood, NPC_Manager.short_interaction);
+                TriggerDialogue();
+                trigger = false;
+            }
         }
     }
     private void OnTriggerExit2D(Collider2D other)
@@ -128,6 +181,11 @@ public class DialogueTrigger : MonoBehaviour
         if (other.gameObject.tag == "Player")
         {
             manager.EndDialogue();
+            in_dialogue = false;
+        }
+        if (!NPC_Manager.short_interaction)
+        {
+            NPC_Manager.UpdateShortInteraction();
         }
         inArea = false;
     }

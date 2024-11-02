@@ -14,11 +14,11 @@ MonoBehaviour:
   m_EditorClassIdentifier: 
   speakerLibrary:
   - name: Evelyn
-    sprite: {fileID: 0}
+    sprite: {fileID: 21300000, guid: 3c4346e7e17648244b9ae8d6ac2e06cc, type: 3}
   - name: Evelyn's Mom
-    sprite: {fileID: 0}
+    sprite: {fileID: 21300000, guid: dd89b703365e8944f85a525be3312eec, type: 3}
   - name: JaVale Andoris
-    sprite: {fileID: 0}
+    sprite: {fileID: 21300000, guid: 223f06fc5c384b047be51eca8024ceaa, type: 3}
   - name: JaVale's Wife
     sprite: {fileID: 21300000, guid: dd89b703365e8944f85a525be3312eec, type: 3}
   - name: Baericks Junifer
