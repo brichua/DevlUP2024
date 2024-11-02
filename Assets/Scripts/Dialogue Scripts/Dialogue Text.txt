@@ -1,3 +1,1 @@
-[NAME=Evelyn][SPEAKERSPRITE=Evelyn] Hi mommy.
-[NAME=JaVale Andoris][SPEAKERSPRITE=JaVale Andoris] U doctor? No? Call me when u doctor?
-[NAME=Evelyn][SPEAKERSPRITE=Evelyn] Bogos binted.
+[NAME=JaVale Andoris][SPEAKERSPRITE=JaVale Andoris]Such a warm, lovely day outside! Perfect for choppin’ down some trees. Gotta find my axes though…

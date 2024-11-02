@@ -12,24 +12,35 @@ public class Inventory : MonoBehaviour
     {
         if (instance != null)
         {
-            Debug.Log("Uh oh, more than one inventory");
+            Debug.LogWarning("Uh oh, more than one inventory");
+            return;
         }
         instance = this; 
     }
     //End Singleton
 
+    public delegate void onItemChanged();
+    public onItemChanged onItemChangedCallBack;
+
     public int space = 10;
 
     public List<Resource> resources = new List<Resource>();
 
-    public void Add (Resource resource)
-    {
+    public bool Add (Resource resource)
+    { 
         if(resources.Count >= space)
         {
             Debug.Log("Out of space");
-            return;
+            return false;
         }
         resources.Add(resource);
+        if(onItemChangedCallBack !=null)
+        {
+            onItemChangedCallBack.Invoke();
+        }
+        
+
+        return true;
     }
 
     public void Remove (Resource resource)
