@@ -5,7 +5,7 @@ using UnityEngine;
 public class Interactable : MonoBehaviour
 {
     public float radius = 2f;
-    bool isFocus = false;
+    public bool isFocus = false;
 
     public virtual void Interact()
     {
@@ -20,6 +20,9 @@ public class Interactable : MonoBehaviour
 
     private void Update()
     {
-            
+        if (isFocus)
+        {
+            Interact();
+        }    
     }
 }

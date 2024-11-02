@@ -17,7 +17,7 @@ public class Interactor : MonoBehaviour
         if(colliders.Length > 0 && Input.GetKeyDown(KeyCode.E))
         {
             Interactable interacable = colliders[0].GetComponent<Interactable>();
-            interacable.Interact();
+            interacable.isFocus = true;
 
         }
     }
