@@ -50,7 +50,7 @@ public class Hearth_Stats : MonoBehaviour
         //Check if it's Waning
         else if (currentHealth <= maxHealth / 2) { mood = 2; }
         //Check if it's Healthy
-        else if (currentHealth <= maxHealth / 1.5) { mood = 3; }
+        else if (currentHealth <= maxHealth / (4/3)) { mood = 3; }
         //Check if it's Blazing
         else if (currentHealth <= maxHealth) { mood = 4; }
     }
