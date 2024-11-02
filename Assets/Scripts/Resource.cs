@@ -8,5 +8,6 @@ public class Resource : ScriptableObject
     new public string name = "New Resource";
     public Sprite icon = null;
     public float burnTime = 100f;
+     
     
 }

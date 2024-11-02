@@ -4,6 +4,7 @@ using UnityEngine;
 
 public class ItemPickup : Interactable
 {
+    public Resource resource; 
     public override void Interact()
     {
         base.Interact();
@@ -11,8 +12,9 @@ public class ItemPickup : Interactable
     }
 
     void PickUp()
-    {
-        Debug.Log("Picking Up Item");
+    { 
+        Debug.Log("Picking Up " + resource.name);
+        Inventory.instance.Add(resource);
         Destroy(gameObject); 
     }
 }
