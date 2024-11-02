@@ -11,7 +11,7 @@ public class DialogueTrigger : MonoBehaviour
 {
     //Attach this script to an empty gameobject with a 2D collider set to trigger
     DialogueManager manager;
-    GameManager gameManager = new GameManager();
+    //GameManager gameManager = new GameManager();
     public TextAsset TextFileAsset; // your imported text file for your NPC
     private Queue<string> dialogue = new Queue<string>(); // stores the dialogue (Great Performance!)
     public float waitTime = 0.5f; // lag time for advancing dialogue so you can actually read it

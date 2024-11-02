@@ -210,7 +210,7 @@ public class DialogueManager : MonoBehaviour
         }
         if (levelBool)
         {
-            GameObject.FindObjectOfType<GameSceneManager>().LoadScene(levelIndex);
+            //GameObject.FindObjectOfType<GameSceneManager>().LoadScene(levelIndex);
         }
         if (currentTrigger.singleUseDialogue)
         {
