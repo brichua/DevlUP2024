@@ -21,14 +21,10 @@ public class DialogueTrigger : MonoBehaviour
     public bool hasBeenUsed = false;
     bool inArea = false;
 
-    //Variables to make the NPC and Player move
-    public GameObject NPC;
-    public GameObject Player;
-    public int hasTeleported = 0;
-    public bool hasAnswered;
-    public bool firstInteraction = true;
-
     // public bool useCollision; // unused for now
+    //Differentiate between the NPCs
+    public GameObject NPC;
+
 
     private void Start()
     {
