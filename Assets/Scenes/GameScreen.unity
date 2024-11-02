@@ -1447,28 +1447,6 @@ CanvasRenderer:
   m_PrefabAsset: {fileID: 0}
   m_GameObject: {fileID: 848966166}
   m_CullTransparentMesh: 1
---- !u!114 &990648584 stripped
-MonoBehaviour:
-  m_CorrespondingSourceObject: {fileID: 4733764754409673186, guid: a4adf80ed2976d84493c3ca7f0b946bd, type: 3}
-  m_PrefabInstance: {fileID: 3479225815936287276}
-  m_PrefabAsset: {fileID: 0}
-  m_GameObject: {fileID: 0}
-  m_Enabled: 1
-  m_EditorHideFlags: 0
-  m_Script: {fileID: 11500000, guid: 4e29b1a8efbd4b44bb3f3716e73f07ff, type: 3}
-  m_Name: 
-  m_EditorClassIdentifier: 
---- !u!114 &990648587 stripped
-MonoBehaviour:
-  m_CorrespondingSourceObject: {fileID: 9184993578616505442, guid: a4adf80ed2976d84493c3ca7f0b946bd, type: 3}
-  m_PrefabInstance: {fileID: 3479225815936287276}
-  m_PrefabAsset: {fileID: 0}
-  m_GameObject: {fileID: 0}
-  m_Enabled: 1
-  m_EditorHideFlags: 0
-  m_Script: {fileID: 11500000, guid: b5391111737483248b5c70d0ea555d2e, type: 3}
-  m_Name: 
-  m_EditorClassIdentifier: 
 --- !u!1 &1061367532
 GameObject:
   m_ObjectHideFlags: 0
@@ -2259,7 +2237,7 @@ PrefabInstance:
     - target: {fileID: 8602211562509060221, guid: b7f146451440f754f8711ddf74fdf04f, type: 3}
       propertyPath: spookyLog
       value: 
-      objectReference: {fileID: 3615561015663230199, guid: 46dab97d8994d234c904dcee917b5e0c, type: 3}
+      objectReference: {fileID: 3615561015663230199, guid: faab3d468a5e14d43aad6d43e21fc5b0, type: 3}
     m_RemovedComponents: []
     m_RemovedGameObjects: []
     m_AddedGameObjects: []
@@ -2718,10 +2696,6 @@ PrefabInstance:
     serializedVersion: 3
     m_TransformParent: {fileID: 1440829824}
     m_Modifications:
-    - target: {fileID: -1139926650261163672, guid: a4adf80ed2976d84493c3ca7f0b946bd, type: 3}
-      propertyPath: itemButton
-      value: 
-      objectReference: {fileID: 990648584}
     - target: {fileID: 971291633348627001, guid: a4adf80ed2976d84493c3ca7f0b946bd, type: 3}
       propertyPath: m_Pivot.x
       value: 0.5
@@ -2801,38 +2775,6 @@ PrefabInstance:
     - target: {fileID: 971291633348627001, guid: a4adf80ed2976d84493c3ca7f0b946bd, type: 3}
       propertyPath: m_LocalEulerAnglesHint.z
       value: 0
-      objectReference: {fileID: 0}
-    - target: {fileID: 2666287153631206028, guid: a4adf80ed2976d84493c3ca7f0b946bd, type: 3}
-      propertyPath: m_Enabled
-      value: 0
-      objectReference: {fileID: 0}
-    - target: {fileID: 4733764754409673186, guid: a4adf80ed2976d84493c3ca7f0b946bd, type: 3}
-      propertyPath: m_OnClick.m_PersistentCalls.m_Calls.Array.size
-      value: 0
-      objectReference: {fileID: 0}
-    - target: {fileID: 4733764754409673186, guid: a4adf80ed2976d84493c3ca7f0b946bd, type: 3}
-      propertyPath: m_OnClick.m_PersistentCalls.m_Calls.Array.data[0].m_Mode
-      value: 1
-      objectReference: {fileID: 0}
-    - target: {fileID: 4733764754409673186, guid: a4adf80ed2976d84493c3ca7f0b946bd, type: 3}
-      propertyPath: m_OnClick.m_PersistentCalls.m_Calls.Array.data[0].m_Target
-      value: 
-      objectReference: {fileID: 990648587}
-    - target: {fileID: 4733764754409673186, guid: a4adf80ed2976d84493c3ca7f0b946bd, type: 3}
-      propertyPath: m_OnClick.m_PersistentCalls.m_Calls.Array.data[0].m_CallState
-      value: 2
-      objectReference: {fileID: 0}
-    - target: {fileID: 4733764754409673186, guid: a4adf80ed2976d84493c3ca7f0b946bd, type: 3}
-      propertyPath: m_OnClick.m_PersistentCalls.m_Calls.Array.data[0].m_MethodName
-      value: DropItem
-      objectReference: {fileID: 0}
-    - target: {fileID: 4733764754409673186, guid: a4adf80ed2976d84493c3ca7f0b946bd, type: 3}
-      propertyPath: m_OnClick.m_PersistentCalls.m_Calls.Array.data[0].m_TargetAssemblyTypeName
-      value: ItemManager, Assembly-CSharp
-      objectReference: {fileID: 0}
-    - target: {fileID: 4733764754409673186, guid: a4adf80ed2976d84493c3ca7f0b946bd, type: 3}
-      propertyPath: m_OnClick.m_PersistentCalls.m_Calls.Array.data[0].m_Arguments.m_ObjectArgumentAssemblyTypeName
-      value: UnityEngine.Object, UnityEngine
       objectReference: {fileID: 0}
     - target: {fileID: 5763079781562992066, guid: a4adf80ed2976d84493c3ca7f0b946bd, type: 3}
       propertyPath: m_Name

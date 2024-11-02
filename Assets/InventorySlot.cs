@@ -14,7 +14,7 @@ public class InventorySlot : MonoBehaviour
         resource = newItem;
         icon.sprite = resource.icon;
         icon.enabled = true;
-        //itemButton.interactable = true;
+        itemButton.interactable = true;
     }
 
     public void ClearSlot() 
@@ -22,11 +22,12 @@ public class InventorySlot : MonoBehaviour
         resource = null;
         icon.sprite = null; 
         icon.enabled = false;
-        //itemButton.interactable = false;
+        itemButton.interactable = false;
     } 
 
     public void OnRemoveButton()
     {
+        Debug.Log("dropped");
         Inventory.instance.Remove(resource);
     }
 }

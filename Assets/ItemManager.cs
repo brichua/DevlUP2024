@@ -6,6 +6,7 @@ using UnityEngine.EventSystems;
 
 public class ItemManager : MonoBehaviour, IPointerClickHandler
 {
+    public GameObject slot;
     public void OnPointerClick(PointerEventData eventData)
     {
         if(eventData.button == PointerEventData.InputButton.Right)
@@ -20,6 +21,7 @@ public class ItemManager : MonoBehaviour, IPointerClickHandler
 
     public void DropItem()
     {
-        Debug.Log("Right Click");
+       InventorySlot inventorySlot = slot.GetComponent<InventorySlot>();
+       inventorySlot.OnRemoveButton();
     }
 }
