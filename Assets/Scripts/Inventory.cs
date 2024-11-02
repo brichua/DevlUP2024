@@ -46,5 +46,9 @@ public class Inventory : MonoBehaviour
     public void Remove (Resource resource)
     {
         resources.Remove(resource);
+        if (onItemChangedCallBack != null)
+        {
+            onItemChangedCallBack.Invoke();
+        }
     }
 }
