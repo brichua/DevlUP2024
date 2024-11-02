@@ -4,6 +4,7 @@ using UnityEngine.UI;
 using TMPro;
 using System.Linq;
 using System.Collections;
+using System.Xml.Serialization;
 
 public class Book : MonoBehaviour
 {
@@ -306,4 +307,13 @@ public class Book : MonoBehaviour
         }
     }
     
+    public void selectRitual()
+    {
+
+    }
+
+    public void chooseRitual()
+    {
+
+    }
 }
