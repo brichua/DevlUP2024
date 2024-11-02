@@ -683,6 +683,7 @@ public class Book : MonoBehaviour
                 {
                     Hearth_Stats.AddHealth(70);
                     StartCoroutine(FadeSequenceHerbs());
+                    Herbs.isPickedUp = false;
                 }
                 else
                 {
@@ -708,6 +709,7 @@ public class Book : MonoBehaviour
                 {
                     Hearth_Stats.AddHealth(70);
                     StartCoroutine(FadeSequenceCoin());
+                    Coin.isPickedUp = false;
                 }
                 else
                 {
@@ -733,6 +735,7 @@ public class Book : MonoBehaviour
                 {
                     Hearth_Stats.AddHealth(70);
                     StartCoroutine(FadeSequenceAmulet());
+                    Amulet.isPickedUp = false;
                 }
                 else
                 {
