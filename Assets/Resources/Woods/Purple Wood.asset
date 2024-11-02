@@ -10,8 +10,8 @@ MonoBehaviour:
   m_Enabled: 1
   m_EditorHideFlags: 0
   m_Script: {fileID: 11500000, guid: 69d77ee95431d5f4c943b85aeb4a2381, type: 3}
-  m_Name: Yellow Wood
+  m_Name: Purple Wood
   m_EditorClassIdentifier: 
-  name: Spruce Wood
-  icon: {fileID: 0}
+  name: Suspicious Wood
+  icon: {fileID: 21300000, guid: ebf0c1586991f584981432440f3687e9, type: 3}
   burnTime: 100
