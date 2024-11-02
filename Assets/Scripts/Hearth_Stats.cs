@@ -6,8 +6,8 @@ using UnityEngine.UI;
 
 public class Hearth_Stats : MonoBehaviour
 {
-    public int maxHealth = 100;
-    public int currentHealth = 100;
+    public static int maxHealth = 100;
+    public static int currentHealth = 100;
     public Boolean hearthLife = true;
     //Variable for Village Mood: 0 = Dead, 1 = Critical, 2 = Waning, 3 = Healthy, 4 = Blazing (Bullshit?)
     public int mood;
@@ -36,7 +36,7 @@ public class Hearth_Stats : MonoBehaviour
         Debug.Log("Hearth health is " + currentHealth);
     }
 
-    public void AddHealth(int healing) 
+    public static void AddHealth(int healing) 
     {
         currentHealth += healing;
         if (currentHealth > maxHealth) { currentHealth = maxHealth; }
