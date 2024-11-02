@@ -20,4 +20,13 @@ public class Player : MonoBehaviour
 
     public static int stone;
     public static int mossyStone;
+
+    public bool interaction1;
+    public bool interaction2;
+    public bool interaction3;
+    public bool interaction4;
+
+    public bool offering1;
+    public bool offering2;
+    public bool offering3;
 }
