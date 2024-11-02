@@ -2,6 +2,7 @@ using System;
 using System.Collections;
 using System.Collections.Generic;
 using UnityEngine;
+using UnityEngine.UI;
 
 public class Hearth_Stats : MonoBehaviour
 {
@@ -17,7 +18,7 @@ public class Hearth_Stats : MonoBehaviour
     IEnumerator CountDownHealth() 
     {
         // hold off for 36 seconds
-        yield return new WaitForSeconds(36);
+        yield return new WaitForSeconds(36f);
         RemoveHealth(1);
         StartCoroutine(CountDownHealth());
     }
@@ -34,6 +35,6 @@ public class Hearth_Stats : MonoBehaviour
     public void AddHealth(int healing) 
     {
         currentHealth += healing;
-        if(currentHealth > maxHealth) { currentHealth = maxHealth; }
+        if (currentHealth > maxHealth) { currentHealth = maxHealth; }
     }
 }
