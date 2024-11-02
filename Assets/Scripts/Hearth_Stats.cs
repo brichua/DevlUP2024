@@ -9,7 +9,7 @@ public class Hearth_Stats : MonoBehaviour
     public int maxHealth = 100;
     public int currentHealth = 100;
     public Boolean hearthLife = true;
-    //Variable for Village Mood: 0 = Dead, 1 = Critical, 2 = Waning, 3 = Healthy, 4 = Blazing
+    //Variable for Village Mood: 0 = Dead, 1 = Critical, 2 = Waning, 3 = Healthy, 4 = Blazing (Bullshit?)
     public int mood;
 
     void Start()
@@ -20,7 +20,7 @@ public class Hearth_Stats : MonoBehaviour
     IEnumerator CountDownHealth() 
     {
         // hold off for 36 seconds
-        yield return new WaitForSeconds(36f);
+        yield return new WaitForSeconds(.5f);
         RemoveHealth(1);
         CheckMood();
         StartCoroutine(CountDownHealth());
@@ -33,6 +33,7 @@ public class Hearth_Stats : MonoBehaviour
         {
             hearthLife = false;
         }
+        Debug.Log("Hooked on a feeling " + currentHealth);
     }
 
     public void AddHealth(int healing) 
