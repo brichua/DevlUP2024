@@ -20,7 +20,7 @@ public class Log_Spawn : MonoBehaviour
 
     void spawnLog(GameObject resource)
     {
-        Instantiate(resource);
+        Instantiate(resource, transform.position, transform.rotation);
     }
 
     
