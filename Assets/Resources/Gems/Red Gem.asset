@@ -10,8 +10,8 @@ MonoBehaviour:
   m_Enabled: 1
   m_EditorHideFlags: 0
   m_Script: {fileID: 11500000, guid: 69d77ee95431d5f4c943b85aeb4a2381, type: 3}
-  m_Name: Acacia
+  m_Name: Red Gem
   m_EditorClassIdentifier: 
-  name: Pink Wood
-  icon: {fileID: 21300000, guid: ce738154f28054649b7858308b51c53b, type: 3}
-  burnTime: 100
+  name: Red Gem
+  icon: {fileID: 21300000, guid: bde641fed51019e4eb963c8131c50a81, type: 3}
+  burnTime: 250

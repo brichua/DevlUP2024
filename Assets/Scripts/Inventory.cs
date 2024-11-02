@@ -34,6 +34,7 @@ public class Inventory : MonoBehaviour
             return false;
         }
         resources.Add(resource);
+        statUpdate(resource,1);
         if(onItemChangedCallBack !=null)
         {
             onItemChangedCallBack.Invoke();
@@ -46,9 +47,81 @@ public class Inventory : MonoBehaviour
     public void Remove (Resource resource)
     {
         resources.Remove(resource);
+        statUpdate(resource, -1);
         if (onItemChangedCallBack != null)
         {
             onItemChangedCallBack.Invoke();
         }
     }
+
+    public void statUpdate(Resource resource, int change)
+    {
+       
+            switch (resource.name)
+            {
+            case "Acacia Wood":
+                Player.pinkWood+=change;
+                break;
+            case "Mystic Wood":
+                Player.blueWood += change;
+                break;
+            case "Oak Wood":
+                Player.brownWood += change;
+                break;
+            case "Suspicious Wood":
+                Player.purpleWood += change;
+                break;
+            case "Spruce Wood":
+                Player.yellowWood += change;
+                break;
+            case "Red Gem":
+                Player.redGem += change;
+                break;
+            case "Green Gem":
+                Player.greenGem += change;
+                break;
+            case "Yellow Gem":
+                Player.yellowGem += change;
+                break;
+            case "Charm":
+                Player.charm += change;
+                break;
+            case "Flower":
+                Player.flower += change;
+                break;
+            case "Herb":
+                Player.herb += change;
+                break;
+            case "Mossy Stone":
+                Player.mossyStone += change;
+                break;
+            case "Stone":
+                Player.stone += change;
+                break;
+            default:
+                Debug.Log("Uh oh");
+                break;
+             
+
+        }
+        
+        
+    }
 }
+/*
+ * public static int pinkWood;
+    public static int blueWood;
+    public static int brownWood;
+    public static int purpleWood;
+    public static int yellowWood;
+
+    public static int redGem;
+    public static int greenGem;
+    public static int yellowGem;
+
+    public static int charm;
+    public static int flower;
+    public static int herb;
+
+    public static int stone;
+    public static int mossyStone;*/
