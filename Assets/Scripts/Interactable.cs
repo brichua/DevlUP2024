@@ -6,10 +6,18 @@ public class Interactable : MonoBehaviour
 {
     public float radius = 2f;
     public bool isFocus = false;
+    private GameObject player;
+
+    private void Start()
+    {
+        player = GameObject.Find("Player");
+    }
 
     public virtual void Interact()
     {
-        Debug.Log("Interacting with " + transform.name);
+       
+            Debug.Log("Interacting with " + transform.name);
+        
     }
 
     private void OnDrawGizmosSelected()
@@ -20,9 +28,19 @@ public class Interactable : MonoBehaviour
 
     private void Update()
     {
+        
         if (isFocus)
         {
-            Interact();
+            isFocus = false;
+            if (player == null)
+            {
+                player = GameObject.Find("Player");
+            }
+            float distance = Vector2.Distance(player.transform.position, transform.position);
+            if (distance < radius)
+            {
+                Interact();
+            }
         }    
     }
 }

@@ -16,8 +16,21 @@ public class Interactor : MonoBehaviour
         numFound = colliders.Length;
         if(colliders.Length > 0 && Input.GetKeyDown(KeyCode.E))
         {
-            Interactable interacable = colliders[0].GetComponent<Interactable>();
-            interacable.isFocus = true;
+            
+            int closest = 0;
+            float closestDistance = Mathf.Infinity;
+            for(int i = 0; i< colliders.Length; i++)
+            {
+
+                if (Vector2.Distance((colliders[i]).transform.position,transform.position)<closestDistance)
+                {
+                    
+                    closest = i;
+                    closestDistance = Vector2.Distance((colliders[i]).transform.position, transform.position);
+                }
+            }
+            Interactable interactable = colliders[closest].GetComponent<Interactable>();
+            interactable.isFocus = true;
 
         }
     }
