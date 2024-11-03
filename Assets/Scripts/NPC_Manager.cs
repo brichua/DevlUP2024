@@ -1,5 +1,6 @@
 using System.Collections;
 using System.Collections.Generic;
+using UnityEditor.ShortcutManagement;
 using UnityEngine;
 using UnityEngine.UI;
 
@@ -7,6 +8,7 @@ public class NPC_Manager : MonoBehaviour
 {
     public bool short_interaction = false;
     public int mood;
+    public int temp;
     public SpriteRenderer sprite;
     public Sprite happy_sprite;
     public Sprite moderate_sprite;
@@ -19,7 +21,7 @@ public class NPC_Manager : MonoBehaviour
 
     private void Update()
     {
-        UpdateMood(mood);
+        UpdateMood(temp);
     }
     public void UpdateShortInteraction()
     {
@@ -33,9 +35,13 @@ public class NPC_Manager : MonoBehaviour
         }
     }
 
-    public void UpdateMood(int mood)
+    public void UpdateMood(int temp)
     {
-        this.mood = mood;
+        if (this.mood != temp) { 
+            short_interaction = false;
+        }
+        this.temp = this.mood;
+        this.mood = this.temp;
         //Update Sprite
         if (mood == 1)
         {

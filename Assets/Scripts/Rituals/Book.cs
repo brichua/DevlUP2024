@@ -68,6 +68,7 @@ public class Book : MonoBehaviour
     public static GameObject purpleWoodSprite2;
     public static GameObject charmSprite;
 
+    public bool fuel = false;
     public bool open = false;
     public bool amulet = false;
     public bool coin = false;
@@ -99,12 +100,21 @@ public class Book : MonoBehaviour
         }
         else
         {
+            if(fuel == false)
+            {
+                selectButton.SetActive(false);
+            }
+            else
+            {
+                selectButton.SetActive(true);
+            }
+            leftButton.SetActive(true);
+            rightButton.SetActive(true);
             open = true;
             incantationText1.fontStyle = FontStyles.Normal;
             incantationText2.fontStyle = FontStyles.Normal;
             Debug.Log("displaying");
             book.SetActive(true);
-            selectButton.SetActive(true);
             if (currentPage == 1)
             {
                 foreach (GameObject item in objects)
@@ -273,6 +283,20 @@ public class Book : MonoBehaviour
         book.SetActive(false);
         leftButton.SetActive(false);
         rightButton.SetActive(false);
+        plus1Left2.text = "";
+        plus1Right2.text = "";
+        plus1Left.text = "";
+        plus2Left.text = "";
+        plus1Right.text = "";
+        plus2Right.text = "";
+        plus1Left3.text = "";
+        plus2Left3.text = "";
+        plus3Left3.text = "";
+        plus1Right3.text = "";
+        plus2Right3.text = "";
+        plus3Right3.text = "";
+        rightText.text = "->";
+        leftText.text = "<-";
         incantationText1.text = "";
         incantationText2.text = "";
         pageNumberText1.text = "";
