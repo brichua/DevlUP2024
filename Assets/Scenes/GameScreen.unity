@@ -1973,7 +1973,7 @@ MonoBehaviour:
   messageText: {fileID: 2051998542}
   messageText2: {fileID: 1427134385}
   book: {fileID: 0}
-  player: {fileID: 0}
+  player: {fileID: 1537633632}
   bar: {fileID: 0}
   messages:
   - "Ugh, this is so boring. Why can\u2019t I just hang out with my friends today?"
@@ -9840,7 +9840,7 @@ GameObject:
   m_Icon: {fileID: 0}
   m_NavMeshLayer: 0
   m_StaticEditorFlags: 0
-  m_IsActive: 0
+  m_IsActive: 1
 --- !u!114 &1537633633
 MonoBehaviour:
   m_ObjectHideFlags: 0

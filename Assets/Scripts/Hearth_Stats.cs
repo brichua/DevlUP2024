@@ -60,6 +60,7 @@ public class Hearth_Stats : MonoBehaviour
 
     private void Update()
     {
+       // Debug.Log(openingDialogue.done);
         if (openingDialogue.done)
         {
             StartCoroutine(CountDownHealth());

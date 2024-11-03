@@ -75,10 +75,7 @@ public class openingDialogue : MonoBehaviour
             yield return ShowMessage(message);
         }
         yield return StartCoroutine(FadeCanvasGroup(fadePanel, 1, 0, fadeDuration));
-        book.SetActive(true);
-        bar.SetActive(true);
-        player.SetActive(true);
-        yield return ShowMessage2("Press [N] to Open Inventory");
+        player.SetActive(false);
         done = true;
         Debug.Log("working");
     }
@@ -91,10 +88,10 @@ public class openingDialogue : MonoBehaviour
         messageText.color = messageColors[count];
 
         yield return StartCoroutine(FadeTextAlpha(messageText, 0, 1, fadeDuration));
-        yield return new WaitForSeconds(3f);
+        yield return new WaitForSeconds(0.01f);
         yield return StartCoroutine(FadeTextAlpha(messageText, 1, 0, fadeDuration));
 
-        yield return new WaitForSeconds(0.5f);
+        yield return new WaitForSeconds(0.01f);
         count++;
     }
 
