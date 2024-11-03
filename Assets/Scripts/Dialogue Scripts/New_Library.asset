@@ -18,12 +18,14 @@ MonoBehaviour:
   - name: Evelyn's Mom
     sprite: {fileID: 21300000, guid: dd89b703365e8944f85a525be3312eec, type: 3}
   - name: JaVale Andoris
-    sprite: {fileID: 21300000, guid: 223f06fc5c384b047be51eca8024ceaa, type: 3}
+    sprite: {fileID: 21300000, guid: c562f9833297394449417fd99adbc4de, type: 3}
   - name: JaVale's Wife
     sprite: {fileID: 21300000, guid: dd89b703365e8944f85a525be3312eec, type: 3}
   - name: Baericks Junifer
-    sprite: {fileID: 0}
+    sprite: {fileID: 21300000, guid: 500e95736438f29449b1f1ff9a3f8936, type: 3}
   - name: Gorgui Bayers
-    sprite: {fileID: 0}
+    sprite: {fileID: 21300000, guid: 223f06fc5c384b047be51eca8024ceaa, type: 3}
+  - name: Richard
+    sprite: {fileID: 21300000, guid: dd89b703365e8944f85a525be3312eec, type: 3}
   - name: Ocetire Sakoru
-    sprite: {fileID: 0}
+    sprite: {fileID: 21300000, guid: c0734b02b168caa4a99f0f5fc8b5dbf8, type: 3}
