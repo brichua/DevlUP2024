@@ -11502,7 +11502,7 @@ GameObject:
   m_Icon: {fileID: 0}
   m_NavMeshLayer: 0
   m_StaticEditorFlags: 0
-  m_IsActive: 0
+  m_IsActive: 1
 --- !u!114 &1537633633
 MonoBehaviour:
   m_ObjectHideFlags: 0
@@ -13879,10 +13879,10 @@ MonoBehaviour:
   m_Script: {fileID: 11500000, guid: 28667814993303a44aef2bdf138d923b, type: 3}
   m_Name: 
   m_EditorClassIdentifier: 
-  audioSource: {fileID: 0}
-  fluteMusic: {fileID: 0}
-  ominousMusic: {fileID: 0}
-  horrorMusic: {fileID: 0}
+  audioSource: {fileID: 1832072126}
+  fluteMusic: {fileID: 8300000, guid: 8d5d581ccd1c8034f8e18b85c3cea8fa, type: 3}
+  ominousMusic: {fileID: 8300000, guid: 301f9ccf5e2b8bf45878685bf128b9fb, type: 3}
+  horrorMusic: {fileID: 8300000, guid: b10538c478de89d45a77bb76e27b908e, type: 3}
 --- !u!82 &1832072126
 AudioSource:
   m_ObjectHideFlags: 0
@@ -14155,20 +14155,20 @@ CompositeCollider2D:
   m_ColliderPaths:
   - m_Collider: {fileID: 1854675018}
     m_ColliderPaths:
-    - - X: 33204236
-        Y: 33418040
-      - X: -33418038
-        Y: 33418040
-      - X: -33418038
-        Y: -19306542
-      - X: 33204236
-        Y: -19306542
+    - - X: 41737172
+        Y: 42005916
+      - X: -42005916
+        Y: 42005916
+      - X: -42005916
+        Y: -24268000
+      - X: 41737172
+        Y: -24268000
   m_CompositePaths:
     m_Paths:
-    - - {x: 3.3203945, y: -1.9306542}
-      - {x: 3.3203945, y: 3.341804}
-      - {x: -3.3418038, y: 3.341775}
-      - {x: -3.3417745, y: -1.9306542}
+    - - {x: 4.173688, y: -2.4268}
+      - {x: 4.173688, y: 4.2005916}
+      - {x: -4.2005916, y: 4.2005625}
+      - {x: -4.2005625, y: -2.4268}
   m_VertexDistance: 0.0005
   m_OffsetDistance: 0.00005
   m_UseDelaunayMesh: 0
