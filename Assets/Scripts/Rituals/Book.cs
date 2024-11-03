@@ -129,8 +129,8 @@ public class Book : MonoBehaviour
                 incantationText2.text = "Sacred flame, let your warmth restore and heal. Ska";
                 pageNumberText1.text = "1";
                 pageNumberText2.text = "2";
-                plus1Left2.text = "+";
-                plus1Right2.text = "+";
+                plus1Left2.text = "";
+                plus1Right2.text = "";
                 plus1Left.text = "";
                 plus2Left.text = "";
                 plus1Right.text = "";
@@ -447,52 +447,57 @@ public class Book : MonoBehaviour
                     random = Random.Range(0, 5);
                     if(random == 0 && Player.pinkWood > 0)
                     {
+                        UseSpecificItem(rituals[0], 2);
                         //Player.pinkWood -= 1;
                         break;
                     }
                     else
                     {
-                        continue;
+                        //continue;
                     }
 
                     if (random == 1 && Player.blueWood > 0)
                     {
-                       // Player.blueWood -= 1;
+                        UseSpecificItem(rituals[0], 4);
+                        //Player.blueWood -= 1;
                         break;
                     }
                     else
                     {
-                        continue;
+                        //continue;
                     }
 
                     if (random == 2 && Player.purpleWood > 0)
                     {
+                        UseSpecificItem(rituals[0], 5);
                         //Player.purpleWood -= 1;
                         break;
                     }
                     else
                     {
-                        continue;
+                       //continue;
                     }
 
                     if (random == 3 && Player.brownWood > 0)
                     {
+                        UseSpecificItem(rituals[0], 6);
                         //Player.brownWood -= 1;
                         break;
                     }
                     else
                     {
-                        continue;
+                        //continue;
                     }
 
                     if (random == 4 && Player.yellowWood > 0)
                     {
+                        UseSpecificItem(rituals[0], 3);
                         //Player.yellowWood -= 1;
                         break;
                     }
                     else
                     {
-                        continue;
+                        //continue;
                     }
                 }
                 while (stoneCheck)
@@ -500,22 +505,24 @@ public class Book : MonoBehaviour
                     random = Random.Range(0, 2);
                     if (random == 0 && Player.stone > 0)
                     {
+                        UseSpecificItem(rituals[0], 1);
                         //Player.stone -= 1;
                         break;
                     }
                     else
                     {
-                        continue;
+                        //continue;
                     }
 
                     if (random == 1 && Player.mossyStone > 0)
                     {
+                        UseSpecificItem(rituals[0], 0);
                         //Player.mossyStone -= 1;
                         break;
                     }
                     else
                     {
-                        continue;
+                        //continue;
                     }
                 }
                 Hearth_Stats.AddHealth(5);
@@ -538,52 +545,57 @@ public class Book : MonoBehaviour
                     random = Random.Range(0, 5);
                     if (random == 0 && Player.pinkWood > 0)
                     {
+                        UseSpecificItem(rituals[1], 2);
                         //Player.pinkWood -= 1;
                         break;
                     }
                     else
                     {
-                        continue;
+                        //continue;
                     }
 
                     if (random == 1 && Player.blueWood > 0)
                     {
+                        UseSpecificItem(rituals[1], 4);
                         //Player.blueWood -= 1;
                         break;
                     }
                     else
                     {
-                        continue;
+                        //continue;
                     }
 
                     if (random == 2 && Player.purpleWood > 0)
                     {
+                        UseSpecificItem(rituals[1], 5);
                         //Player.purpleWood -= 1;
                         break;
                     }
                     else
                     {
-                        continue;
+                        //continue;
                     }
 
                     if (random == 3 && Player.brownWood > 0)
                     {
+                        UseSpecificItem(rituals[1], 6);
                         //Player.brownWood -= 1;
                         break;
                     }
                     else
                     {
-                        continue;
+                        //continue;
                     }
 
                     if (random == 4 && Player.yellowWood > 0)
                     {
+                        UseSpecificItem(rituals[1], 3);
                         //Player.yellowWood -= 1;
                         break;
                     }
                     else
                     {
-                        continue;
+                        //continue;
                     }
                 }
                 while (herbCheck)
@@ -591,22 +603,24 @@ public class Book : MonoBehaviour
                     random = Random.Range(0, 2);
                     if (random == 0 && Player.herb > 0)
                     {
+                        UseSpecificItem(rituals[1], 1);
                         //Player.herb -= 1;
                         break;
                     }
                     else
                     {
-                        continue;
+                        //continue;
                     }
 
                     if (random == 1 && Player.flower > 0)
                     {
+                        UseSpecificItem(rituals[1], 0);
                         //Player.flower -= 1;
                         break;
                     }
                     else
                     {
-                        continue;
+                        //continue;
                     }
                 }
                 Hearth_Stats.AddHealth(5);
@@ -622,6 +636,7 @@ public class Book : MonoBehaviour
             close();
             if (Player.pinkWood > 0 && Player.herb > 0 && Player.stone > 0)
             {
+                UseItems(rituals[2]);
                 //Player.pinkWood -= 1;
                 //Player.herb -= 1;
                 //Player.stone -= 1;
@@ -638,6 +653,7 @@ public class Book : MonoBehaviour
             close();
             if (Player.brownWood > 0 && Player.herb > 0 && Player.mossyStone > 0)
             {
+                UseItems(rituals[3]);
                 //Player.brownWood -= 1;
                 //Player.herb -= 1;
                 //Player.mossyStone -= 1;
@@ -654,7 +670,8 @@ public class Book : MonoBehaviour
             close();
             if (Player.yellowGem > 0 && Player.yellowWood > 0 && Player.flower > 0)
             {
-               // Player.yellowGem -= 1;
+                UseItems(rituals[4]);
+                //Player.yellowGem -= 1;
                 //Player.yellowWood -= 1;
                 //Player.flower -= 1;
                 Hearth_Stats.AddHealth(10);
@@ -670,8 +687,9 @@ public class Book : MonoBehaviour
             close();
             if (Player.redGem > 0 && Player.pinkWood > 0 && Player.blueWood > 0)
             {
+                UseItems(rituals[5]);
                 //Player.redGem -= 1;
-               // Player.pinkWood -= 1;
+                //Player.pinkWood -= 1;
                 //Player.blueWood -= 1;
                 Hearth_Stats.AddHealth(10);
             }
@@ -686,6 +704,7 @@ public class Book : MonoBehaviour
             close();
             if (Player.greenGem > 0 && Player.flower > 0 && Player.purpleWood > 0)
             {
+                UseItems(rituals[6]);
                 //Player.greenGem -= 1;
                 //Player.flower -= 1;
                 //Player.purpleWood -= 1;
@@ -702,6 +721,7 @@ public class Book : MonoBehaviour
             close();
             if (Player.purpleWood > 0 && Player.herb > 0 && Player.mossyStone > 0 && Player.brownWood > 0)
             {
+                UseItems(rituals[7]);
                 //Player.purpleWood -= 1;
                 //Player.herb -= 1;
                 //Player.mossyStone -= 1;
@@ -728,10 +748,11 @@ public class Book : MonoBehaviour
             close();
             if (Player.yellowGem > 0 && Player.redGem > 0 && Player.stone > 0 && Player.mossyStone > 0)
             {
+                UseItems(rituals[8]);
                 //Player.yellowGem -= 1;
                 //Player.redGem -= 1;
                 //Player.stone -= 1;
-               //Player.mossyStone -= 1;
+                //Player.mossyStone -= 1;
                 if (coin == false)
                 {
                     Hearth_Stats.AddHealth(70);
@@ -754,6 +775,7 @@ public class Book : MonoBehaviour
             close();
             if (Player.yellowGem > 0 && Player.redGem > 0 && Player.greenGem > 0 && Player.charm > 0)
             {
+                UseItems(rituals[9]);
                 //Player.yellowGem -= 1;
                 //Player.redGem -= 1;
                 //Player.charm -= 1;
@@ -847,5 +869,11 @@ public class Book : MonoBehaviour
         {
             Inventory.instance.Remove(resource);
         }
+    }
+
+    public void UseSpecificItem(Ritual ritual, int itemID)
+    {
+        Resource choosen = ritual.reqResources[itemID];
+        Inventory.instance.Remove(choosen);
     }
 }

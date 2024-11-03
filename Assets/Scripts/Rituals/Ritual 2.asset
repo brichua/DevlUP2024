@@ -12,10 +12,10 @@ MonoBehaviour:
   m_Script: {fileID: 11500000, guid: 4fb9f43bb2f2ed349bf8749f73a996e0, type: 3}
   m_Name: Ritual 2
   m_EditorClassIdentifier: 
-  name: Ritual 1
+  name: Ritual 2
   reqResources:
-  - {fileID: 11400000, guid: d244e9acb4879f145885527a90ada28b, type: 2}
-  - {fileID: 11400000, guid: 855730235c8e5124999d56e98edc92f1, type: 2}
+  - {fileID: 11400000, guid: 3d3795d10c53f7c41b01218cdcef6289, type: 2}
+  - {fileID: 11400000, guid: fc119617ac4a2f04483fdf47b1857cf1, type: 2}
   - {fileID: 11400000, guid: d09700e0b5dfb4e47989bbc8d5dcb897, type: 2}
   - {fileID: 11400000, guid: 226a4a93ae8fafc45b9308a8effbe5ee, type: 2}
   - {fileID: 11400000, guid: 2f96f3e5e23d20540ac6bcdb4c90a135, type: 2}
