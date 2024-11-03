@@ -129,8 +129,8 @@ public class Book : MonoBehaviour
                 incantationText2.text = "Sacred flame, let your warmth restore and heal. Ska";
                 pageNumberText1.text = "1";
                 pageNumberText2.text = "2";
-                plus1Left2.text = "";
-                plus1Right2.text = "";
+                plus1Left2.text = "+";
+                plus1Right2.text = "+";
                 plus1Left.text = "";
                 plus2Left.text = "";
                 plus1Right.text = "";

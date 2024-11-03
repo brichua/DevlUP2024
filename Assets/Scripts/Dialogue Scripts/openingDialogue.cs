@@ -11,6 +11,9 @@ public class openingDialogue : MonoBehaviour
     public GameObject startButton;
     public TextMeshProUGUI messageText;
     public TextMeshProUGUI messageText2;
+    public GameObject book;
+    public GameObject player;
+    public GameObject bar;
 
     public string[] messages = {
         "Ugh, this is so boring. Why can’t I just hang out with my friends today?",
@@ -72,6 +75,9 @@ public class openingDialogue : MonoBehaviour
             yield return ShowMessage(message);
         }
         yield return StartCoroutine(FadeCanvasGroup(fadePanel, 1, 0, fadeDuration));
+        book.SetActive(true);
+        bar.SetActive(true);
+        player.SetActive(true);
         yield return ShowMessage2("Press [N] to Open Inventory");
         done = true;
         Debug.Log("working");
