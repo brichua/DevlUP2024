@@ -5,7 +5,7 @@ using UnityEngine;
 public class Log_Spawn : MonoBehaviour
 {
     public GameObject spookyLog;
-    public GameObject spookyRock;
+    
     // Start is called before the first frame update
     void Start()
     {
