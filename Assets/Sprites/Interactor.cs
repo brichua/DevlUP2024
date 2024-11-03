@@ -14,7 +14,7 @@ public class Interactor : MonoBehaviour
     {
         colliders =  Physics2D.OverlapCircleAll(transform.position, interactionRadius, interactableLayer);
         numFound = colliders.Length;
-        if(colliders.Length > 0 && Input.GetKeyDown(KeyCode.E))
+        if(colliders.Length > 0)
         {
             
             int closest = 0;
@@ -30,7 +30,17 @@ public class Interactor : MonoBehaviour
                 }
             }
             Interactable interactable = colliders[closest].GetComponent<Interactable>();
-            interactable.isFocus = true;
+            if (colliders[closest].GetComponent<ItemPickup>() != null)
+            {
+                string closestName = colliders[closest].GetComponent<ItemPickup>().resource.name;
+                //Debug.Log(closestName);
+            }
+            
+            if (Input.GetKeyDown(KeyCode.E))
+            {
+                
+                interactable.isFocus = true;
+            }
 
         }
     }
