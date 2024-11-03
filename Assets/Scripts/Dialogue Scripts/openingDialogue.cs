@@ -10,6 +10,7 @@ public class openingDialogue : MonoBehaviour
     public GameObject titleScreen;
     public GameObject startButton;
     public TextMeshProUGUI messageText;
+    public TextMeshProUGUI messageText2;
 
     public string[] messages = {
         "Ugh, this is so boring. Why can’t I just hang out with my friends today?",
@@ -38,6 +39,7 @@ public class openingDialogue : MonoBehaviour
     private bool playerInRange = false;
     public static bool isPickedUp = true;
     public static bool appeared = false;
+    public static bool done = false;
     private int count = 0;
 
     public void StartGame()
@@ -70,7 +72,9 @@ public class openingDialogue : MonoBehaviour
             yield return ShowMessage(message);
         }
         yield return StartCoroutine(FadeCanvasGroup(fadePanel, 1, 0, fadeDuration));
-        yield return ShowMessage("Press [N] to Open Inventory");
+        yield return ShowMessage2("Press [N] to Open Inventory");
+        done = true;
+        Debug.Log("working");
     }
 
     IEnumerator ShowMessage(string message)
@@ -86,6 +90,15 @@ public class openingDialogue : MonoBehaviour
 
         yield return new WaitForSeconds(0.5f);
         count++;
+    }
+
+    IEnumerator ShowMessage2(string message)
+    {
+        messageText2.text = message;
+
+        yield return StartCoroutine(FadeTextAlpha(messageText2, 0, 1, fadeDuration));
+        yield return new WaitForSeconds(3f);
+        yield return StartCoroutine(FadeTextAlpha(messageText2, 1, 0, fadeDuration));
     }
 
     IEnumerator FadeTextAlpha(TextMeshProUGUI text, float startAlpha, float endAlpha, float duration)

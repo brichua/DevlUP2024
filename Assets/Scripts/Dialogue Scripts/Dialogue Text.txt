@@ -1,12 +1,12 @@
-[NAME=Evelyn][SPEAKERSPRITE=Evelyn]Hello Mr. Bayers, how’s your day going?
-[NAME=Gorgui Bayers][SPEAKERSPRITE=Gorgui Bayers]Ahhhh, nothing compared to my former days, young Evelyn. Those days of policing are behind me, I’m enjoying my more relaxed life.
-[NAME=Evelyn][SPEAKERSPRITE=Evelyn]You volunteer at Brancia’s Cat Shelter now, don’t you?
-[NAME=Gorgui Bayers][SPEAKERSPRITE=Gorgui Bayers]Yes, I do! Those tiny little critters are some troublemakers sometimes. Trying to herd them away from their litter boxes to clean them does a number on my frail bones!
-[NAME=Evelyn][SPEAKERSPRITE=Evelyn]Awwwww, I’m sure they make up for it with their cuteness though. I wish I could volunteer there if I had time.
-[NAME=Gorgui Bayers][SPEAKERSPRITE=Gorgui Bayers]Ohhh, your time will come eventually young Evelyn. You can find happiness in any job though, just gotta put your back into it.
-[NAME=Evelyn][SPEAKERSPRITE=Evelyn]Yeah, I’m trying. For now, there’s nothing too interesting about keeping the fire lit. But hey, at least it’s decently easy.
-[NAME=Gorgui Bayers][SPEAKERSPRITE=Gorgui Bayers]Well, it could be worse. Could be a hard job that you hate.
-[NAME=Gorgui Bayers][SPEAKERSPRITE=Gorgui Bayers]Oh, I forgot I have my juice tasting panel tomorrow. I have to start getting ready for that.
-[NAME=Gorgui Bayers][SPEAKERSPRITE=Gorgui Bayers]Take care young Evelyn. Make sure to stay out of trouble. You’re still very young after all!
-[NAME=Evelyn][SPEAKERSPRITE=Evelyn]Thank you Mr. Bayer, you too!
-[NAME=Evelyn][SPEAKERSPRITE=Evelyn]I mean the take care part, not the stay out of trouble part, whoops.
+[NAME=Baericks Junifer][SPEAKERSPRITE=Baericks Junifer]Trinkets! Get your special trinkets! Oh, it’s you Evelyn. Here for trinkets?
+[NAME=Evelyn][SPEAKERSPRITE=Evelyn]Oh, I’m just taking a look around Ms. Junifer. Find anything special as of late?
+[NAME=Baericks Junifer][SPEAKERSPRITE=Baericks Junifer]Unfortunately, nothing much. I haven’t gone exploring in a while myself, and I’m still waiting for a crew I dispatched to return.
+[NAME=Evelyn][SPEAKERSPRITE=Evelyn]Oh, where are they at?
+[NAME=Baericks Junifer][SPEAKERSPRITE=Baericks Junifer]Oh, just sent them down south. There’s a system of caves down in that direction, they’re exploring so far.
+[NAME=Evelyn][SPEAKERSPRITE=Evelyn]Yikes, that sounds a bit dangerous though.
+[NAME=Baericks Junifer][SPEAKERSPRITE=Baericks Junifer]Relax, although it’s dangerous for people like us, I hired professionals. They shouldn’t go too deep either.
+[NAME=Baericks Junifer][SPEAKERSPRITE=Baericks Junifer]I’m just interested if there’s anything of historical significance to document, some cave paintings, or, I don’t know, uhhhh artifacts of some kind.
+[NAME=Evelyn][SPEAKERSPRITE=Evelyn]I see, so what are you doing now?
+[NAME=Baericks Junifer][SPEAKERSPRITE=Baericks Junifer]Why, uhhhhh............I am manning the shop, yes, manning the shop! This is very difficult to do, you know. So many people try to lowball me for all my trinkets, these are art!
+[NAME=Evelyn][SPEAKERSPRITE=Evelyn]Welp, I’m going to take care of other things. Have fun running your drawings shop.
+[NAME=Baericks Junifer][SPEAKERSPRITE=Baericks Junifer]Why of course, have a good da- WAIT, DRAWING SHOP?!?!?

@@ -2,6 +2,7 @@ using System;
 using System.Collections;
 using System.Collections.Generic;
 using TMPro;
+using UnityEditor;
 using UnityEditor.Animations;
 using UnityEditor.VersionControl;
 using UnityEngine;
@@ -32,11 +33,18 @@ public class Hearth_Stats : MonoBehaviour
     public TextMeshProUGUI messageText;
 
     public string[] messages1 = {
-        
-    };
-
-    public string[] messages2 = {
-
+        "Try as she must, the fire’s insatiable hunger is too overwhelming for Evelyn to keep up.",
+        "Was the fire always this hungry? Did it always need this much resources?",
+        "That much didn’t matter to the town, their cries echo throughout the village. The air was thick with the scent of ash and despair.",
+        "The fire cared not for women or children, cared not for the elderly or infancy. The “protection” they relied on has been shattered, nothing exists to “protect” them now.",
+        "The cries stop.",
+        "……………………",
+        "The footsteps grow near. They can’t lose their “protection,” no matter what, they have to reignite the flames.",
+        "What was the first offering again?",
+        "Evelyn can’t seem to remember, but they do. Somehow, they do. And there is nothing you can do about it.",
+        "The only thing that remains are tatters of red and orange cloth scattered on the earth.",
+        "Another one will be found. Their “protection” will burn bright again. Burn, burn, and burn again…until they too will burn with it.",
+        "The third offering has been submitted…"
     };
 
     public float fadeDuration = 1f;
@@ -48,20 +56,21 @@ public class Hearth_Stats : MonoBehaviour
         // Preps the stage for having all game objects be true
         fireImage.runtimeAnimatorController = strongestFire;
         mood = 4;
-        StartCoroutine(CountDownHealth());
     }
 
     private void Update()
     {
+        if (openingDialogue.done)
+        {
+            StartCoroutine(CountDownHealth());
+            openingDialogue.done = false;
+        }
         Debug.Log(currentHealth);
         //Check if it's Dead
-        if (currentHealth == 0)
+        if (currentHealth <= 0)
         {
             mood = 0;
-            if (Player.allInteractions)
-            {
-                StartCoroutine(BadEnding());
-            }
+            StartCoroutine(BadEnding());
         }
         //Check if it's critical
         else if (currentHealth <= 25)
@@ -129,22 +138,14 @@ public class Hearth_Stats : MonoBehaviour
 
     private IEnumerator BadEnding()
     {
+        yield return StartCoroutine(FadeToBlack());
         player.transform.position = fireImage.transform.position;
         Debug.Log("RAaaaa");
         shadow.transform.position = fireImage.transform.position;
-        //yield return StartCoroutine(FadeToBlack());
-        //player.transform.position = this.transform.position;
-        //Debug.Log("RAaaaa");
         yield return StartCoroutine(FadeFromBlack());
+        //player.transform.position = this.transform.position;
         shadow.transform.position = fireImage.transform.position;
-        if (Player.allInteractions)
-        {
-            StartCoroutine(Ending1());
-        }
-        else
-        {
-            StartCoroutine(Ending2());
-        }
+        StartCoroutine(Ending());
     }
 
     private IEnumerator FadeToBlack()
@@ -198,22 +199,11 @@ public class Hearth_Stats : MonoBehaviour
         cg.blocksRaycasts = endAlpha == 1;
     }
 
-    IEnumerator Ending1()
+    IEnumerator Ending()
     {
         yield return StartCoroutine(FadeCanvasGroup(fadePanel, 0, 1, fadeDuration));
         endScreen.SetActive(true);
         foreach (string message in messages1)
-        {
-            yield return ShowMessage(message);
-        }
-        yield return StartCoroutine(FadeCanvasGroup(fadePanel, 1, 0, fadeDuration));
-    }
-
-    IEnumerator Ending2()
-    {
-        yield return StartCoroutine(FadeCanvasGroup(fadePanel, 0, 1, fadeDuration));
-        endScreen.SetActive(true);
-        foreach (string message in messages2)
         {
             yield return ShowMessage(message);
         }
