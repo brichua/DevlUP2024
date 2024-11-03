@@ -120,18 +120,45 @@ public class endingDialogue : MonoBehaviour
         cg.blocksRaycasts = endAlpha == 1;
     }
 
-    IEnumerator OpeniningSequence()
+    IEnumerator gameOverMessages()
     {
         yield return StartCoroutine(FadeCanvasGroup(fadePanel, 0, 1, fadeDuration));
         startButton.SetActive(false);
         titleScreen.SetActive(false);
-        foreach (string message in messages)
+        foreach (string message in gameOver)
         {
             yield return ShowMessage(message);
         }
         yield return StartCoroutine(FadeCanvasGroup(fadePanel, 1, 0, fadeDuration));
         yield return ShowMessage2("Press [N] to Open Inventory");
-        done = true;
+        Debug.Log("working");
+    }
+
+    IEnumerator goodEndingMessages()
+    {
+        yield return StartCoroutine(FadeCanvasGroup(fadePanel, 0, 1, fadeDuration));
+        startButton.SetActive(false);
+        titleScreen.SetActive(false);
+        foreach (string message in goodEnding)
+        {
+            yield return ShowMessage(message);
+        }
+        yield return StartCoroutine(FadeCanvasGroup(fadePanel, 1, 0, fadeDuration));
+        yield return ShowMessage2("Press [N] to Open Inventory");
+        Debug.Log("working");
+    }
+
+    IEnumerator badEndingMessages()
+    {
+        yield return StartCoroutine(FadeCanvasGroup(fadePanel, 0, 1, fadeDuration));
+        startButton.SetActive(false);
+        titleScreen.SetActive(false);
+        foreach (string message in badEnding)
+        {
+            yield return ShowMessage(message);
+        }
+        yield return StartCoroutine(FadeCanvasGroup(fadePanel, 1, 0, fadeDuration));
+        yield return ShowMessage2("Press [N] to Open Inventory");
         Debug.Log("working");
     }
 
@@ -139,15 +166,12 @@ public class endingDialogue : MonoBehaviour
     {
         messageText.text = message;
 
-        Debug.Log(messageColors[count]);
-        messageText.color = messageColors[count];
 
         yield return StartCoroutine(FadeTextAlpha(messageText, 0, 1, fadeDuration));
         yield return new WaitForSeconds(3f);
         yield return StartCoroutine(FadeTextAlpha(messageText, 1, 0, fadeDuration));
 
         yield return new WaitForSeconds(0.5f);
-        count++;
     }
 
     IEnumerator ShowMessage2(string message)
