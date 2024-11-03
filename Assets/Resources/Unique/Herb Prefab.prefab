@@ -12,9 +12,9 @@ GameObject:
   - component: {fileID: 1072541625676130622}
   - component: {fileID: -2289378821549711087}
   - component: {fileID: 6241624197649627586}
-  m_Layer: 0
+  m_Layer: 6
   m_Name: Herb Prefab
-  m_TagString: Untagged
+  m_TagString: Resource
   m_Icon: {fileID: 0}
   m_NavMeshLayer: 0
   m_StaticEditorFlags: 0

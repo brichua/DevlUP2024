@@ -12,9 +12,9 @@ GameObject:
   - component: {fileID: -6897462536417678877}
   - component: {fileID: -7421481144843787812}
   - component: {fileID: -8176646619799678399}
-  m_Layer: 0
+  m_Layer: 6
   m_Name: Green Gem Prefab
-  m_TagString: Untagged
+  m_TagString: Resource
   m_Icon: {fileID: 0}
   m_NavMeshLayer: 0
   m_StaticEditorFlags: 0

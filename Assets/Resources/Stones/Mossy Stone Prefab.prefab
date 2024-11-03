@@ -12,9 +12,9 @@ GameObject:
   - component: {fileID: -1091624441024818648}
   - component: {fileID: 4449966134591892075}
   - component: {fileID: 5516561466899333743}
-  m_Layer: 0
+  m_Layer: 6
   m_Name: Mossy Stone Prefab
-  m_TagString: Untagged
+  m_TagString: Resource
   m_Icon: {fileID: 0}
   m_NavMeshLayer: 0
   m_StaticEditorFlags: 0

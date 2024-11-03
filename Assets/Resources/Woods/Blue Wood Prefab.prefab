@@ -12,9 +12,9 @@ GameObject:
   - component: {fileID: 3322347345862273769}
   - component: {fileID: -6018975263392946959}
   - component: {fileID: 4508032977902121609}
-  m_Layer: 0
+  m_Layer: 6
   m_Name: Blue Wood Prefab
-  m_TagString: Untagged
+  m_TagString: Resource
   m_Icon: {fileID: 0}
   m_NavMeshLayer: 0
   m_StaticEditorFlags: 0

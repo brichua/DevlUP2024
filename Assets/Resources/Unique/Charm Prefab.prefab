@@ -12,9 +12,9 @@ GameObject:
   - component: {fileID: -4894868542144403824}
   - component: {fileID: -8233352997819429085}
   - component: {fileID: -5980481819503828788}
-  m_Layer: 0
+  m_Layer: 6
   m_Name: Charm Prefab
-  m_TagString: Untagged
+  m_TagString: Resource
   m_Icon: {fileID: 0}
   m_NavMeshLayer: 0
   m_StaticEditorFlags: 0

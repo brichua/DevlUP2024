@@ -12,9 +12,9 @@ GameObject:
   - component: {fileID: 1304877467487711484}
   - component: {fileID: 8283799444625848062}
   - component: {fileID: 7093872106389193226}
-  m_Layer: 0
+  m_Layer: 6
   m_Name: Flower Prefab
-  m_TagString: Untagged
+  m_TagString: Resource
   m_Icon: {fileID: 0}
   m_NavMeshLayer: 0
   m_StaticEditorFlags: 0

@@ -12,9 +12,9 @@ GameObject:
   - component: {fileID: -4188531583888934027}
   - component: {fileID: 3328437738735584873}
   - component: {fileID: -5062797235828694524}
-  m_Layer: 0
+  m_Layer: 6
   m_Name: Red Gem Prefab
-  m_TagString: Untagged
+  m_TagString: Resource
   m_Icon: {fileID: 0}
   m_NavMeshLayer: 0
   m_StaticEditorFlags: 0

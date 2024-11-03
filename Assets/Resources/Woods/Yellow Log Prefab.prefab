@@ -12,9 +12,9 @@ GameObject:
   - component: {fileID: -3734067237956607837}
   - component: {fileID: 8117458153332377210}
   - component: {fileID: 1930269055960558647}
-  m_Layer: 0
+  m_Layer: 6
   m_Name: Yellow Log Prefab
-  m_TagString: Untagged
+  m_TagString: Resource
   m_Icon: {fileID: 0}
   m_NavMeshLayer: 0
   m_StaticEditorFlags: 0
