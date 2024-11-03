@@ -3,7 +3,22 @@ guid: 5c8456ad8eab58540ae25516e0fbbe25
 MonoImporter:
   externalObjects: {}
   serializedVersion: 2
-  defaultReferences: []
+  defaultReferences:
+  - player: {fileID: 749100305120647787, guid: c425ee9b89522ff4b9450367fcced469, type: 3}
+  - fireImage: {instanceID: 0}
+  - barImage: {instanceID: 0}
+  - weakFire: {instanceID: 0}
+  - moderateFire: {instanceID: 0}
+  - strongFire: {instanceID: 0}
+  - strongestFire: {instanceID: 0}
+  - fadeImage: {instanceID: 0}
+  - strongestBar: {instanceID: 0}
+  - strongBar: {instanceID: 0}
+  - moderateBar: {instanceID: 0}
+  - weakBar: {instanceID: 0}
+  - fadePanel: {instanceID: 0}
+  - endScreen: {instanceID: 0}
+  - messageText: {instanceID: 0}
   executionOrder: 0
   icon: {instanceID: 0}
   userData: 

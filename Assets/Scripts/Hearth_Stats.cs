@@ -14,8 +14,10 @@ public class Hearth_Stats : MonoBehaviour
     public static Boolean hearthLife = true;
     //Variable for Village Mood: 0 = Dead, 1 = Critical, 2 = Waning, 3 = Healthy, 4 = Blazing (Bullshit?)
     public static int mood;
+    public GameObject player;
     public Animator fireImage;
     public Image barImage;
+    public GameObject shadow;
     public AnimatorController weakFire;
     public AnimatorController moderateFire;
     public AnimatorController strongFire;
@@ -127,10 +129,14 @@ public class Hearth_Stats : MonoBehaviour
 
     private IEnumerator BadEnding()
     {
-        yield return StartCoroutine(FadeToBlack());
-        //tp player here
+        player.transform.position = fireImage.transform.position;
+        Debug.Log("RAaaaa");
+        shadow.transform.position = fireImage.transform.position;
+        //yield return StartCoroutine(FadeToBlack());
+        //player.transform.position = this.transform.position;
+        //Debug.Log("RAaaaa");
         yield return StartCoroutine(FadeFromBlack());
-        //animation stuff
+        shadow.transform.position = fireImage.transform.position;
         if (Player.allInteractions)
         {
             StartCoroutine(Ending1());
