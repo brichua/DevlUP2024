@@ -1,12 +1,14 @@
 using System.Collections;
 using System.Collections.Generic;
 using TMPro;
+using UnityEditor.VersionControl;
 using UnityEngine;
 
 public class openingDialogue : MonoBehaviour
 {
     public CanvasGroup fadePanel;
     public GameObject titleScreen;
+    public GameObject startButton;
     public TextMeshProUGUI messageText;
 
     public string[] messages = {
@@ -38,7 +40,7 @@ public class openingDialogue : MonoBehaviour
     public static bool appeared = false;
     private int count = 0;
 
-    void Start()
+    public void StartGame()
     {
         StartCoroutine(OpeniningSequence());
     }
@@ -61,14 +63,14 @@ public class openingDialogue : MonoBehaviour
     IEnumerator OpeniningSequence()
     {
         yield return StartCoroutine(FadeCanvasGroup(fadePanel, 0, 1, fadeDuration));
-
+        startButton.SetActive(false);
         titleScreen.SetActive(false);
         foreach (string message in messages)
         {
             yield return ShowMessage(message);
         }
-
         yield return StartCoroutine(FadeCanvasGroup(fadePanel, 1, 0, fadeDuration));
+        yield return ShowMessage("Press [N] to Open Inventory");
     }
 
     IEnumerator ShowMessage(string message)
@@ -104,4 +106,5 @@ public class openingDialogue : MonoBehaviour
         color.a = endAlpha;
         text.color = color;
     }
+
 }

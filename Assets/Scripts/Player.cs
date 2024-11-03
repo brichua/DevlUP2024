@@ -29,4 +29,6 @@ public class Player : MonoBehaviour
     public bool offering1;
     public bool offering2;
     public bool offering3;
+
+    public static bool allInteractions = false;
 }
