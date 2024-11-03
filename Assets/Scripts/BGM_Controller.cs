@@ -8,6 +8,9 @@ public class BGM_Controller : MonoBehaviour
     public AudioClip fluteMusic;
     public AudioClip ominousMusic;
     public AudioClip horrorMusic;
+    public AudioClip fluteRitualMusic;
+    public AudioClip ominousRitualMusic;
+    public AudioClip horrorRitualMusic;
     public static int setMood;
 
     void Start()
