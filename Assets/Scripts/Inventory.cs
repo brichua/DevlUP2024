@@ -42,7 +42,7 @@ public class Inventory : MonoBehaviour
             return false;
         }
         resources.Add(resource);
-        StartCoroutine(updateInfo(resource.name));
+        //StartCoroutine(updateInfo(resource.name));
         statUpdate(resource,1);
         if(onItemChangedCallBack !=null)
         {
