@@ -1,0 +1,20 @@
+%YAML 1.1
+%TAG !u! tag:unity3d.com,2011:
+--- !u!114 &11400000
+MonoBehaviour:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  m_GameObject: {fileID: 0}
+  m_Enabled: 1
+  m_EditorHideFlags: 0
+  m_Script: {fileID: 11500000, guid: 4fb9f43bb2f2ed349bf8749f73a996e0, type: 3}
+  m_Name: Ritual 9
+  m_EditorClassIdentifier: 
+  name: Ritual 9
+  reqResources:
+  - {fileID: 11400000, guid: 6ccfb87212a21b74e8242dc6de915057, type: 2}
+  - {fileID: 11400000, guid: fa00d32b6c4d8424baaef30bbdd1faed, type: 2}
+  - {fileID: 11400000, guid: d244e9acb4879f145885527a90ada28b, type: 2}
+  - {fileID: 11400000, guid: 855730235c8e5124999d56e98edc92f1, type: 2}
