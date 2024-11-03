@@ -86,6 +86,9 @@ public class Book : MonoBehaviour
     greenGemSprite, greenGemSprite2, pinkWoodSprite, pinkWoodSprite2, blueWoodSprite, brownWoodSprite,
     brownWoodSprite2, purpleWoodSprite, purpleWoodSprite2, charmSprite, stoneSprite2, mossyStoneSprite2, yellowWoodSprite, mossyStoneSprite3};
 
+    public Ritual[] rituals = new Ritual[10];
+    
+
     
     public void display()
     {
@@ -812,5 +815,13 @@ public class Book : MonoBehaviour
     {
         yield return new WaitForSeconds(2f);
         notEnoughMaterials.SetActive(false);
+    }
+
+    public void UseItems(Ritual ritual)
+    {
+        foreach (Resource resource in ritual.reqResources)
+        {
+            Inventory.instance.Remove(resource);
+        }
     }
 }
