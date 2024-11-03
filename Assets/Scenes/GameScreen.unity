@@ -14155,20 +14155,20 @@ CompositeCollider2D:
   m_ColliderPaths:
   - m_Collider: {fileID: 1854675018}
     m_ColliderPaths:
-    - - X: 41737172
-        Y: 42005916
-      - X: -42005916
-        Y: 42005916
-      - X: -42005916
-        Y: -24268000
-      - X: 41737172
-        Y: -24268000
+    - - X: 33204236
+        Y: 33418040
+      - X: -33418038
+        Y: 33418040
+      - X: -33418038
+        Y: -19306542
+      - X: 33204236
+        Y: -19306542
   m_CompositePaths:
     m_Paths:
-    - - {x: 4.173688, y: -2.4268}
-      - {x: 4.173688, y: 4.2005916}
-      - {x: -4.2005916, y: 4.2005625}
-      - {x: -4.2005625, y: -2.4268}
+    - - {x: 3.3203945, y: -1.9306542}
+      - {x: 3.3203945, y: 3.341804}
+      - {x: -3.3418038, y: 3.341775}
+      - {x: -3.3417745, y: -1.9306542}
   m_VertexDistance: 0.0005
   m_OffsetDistance: 0.00005
   m_UseDelaunayMesh: 0
@@ -17231,7 +17231,7 @@ GameObject:
   m_Icon: {fileID: 0}
   m_NavMeshLayer: 0
   m_StaticEditorFlags: 0
-  m_IsActive: 0
+  m_IsActive: 1
 --- !u!222 &2042252418800635170
 CanvasRenderer:
   m_ObjectHideFlags: 0
@@ -17551,7 +17551,7 @@ RectTransform:
   m_LocalEulerAnglesHint: {x: 0, y: 0, z: 0}
   m_AnchorMin: {x: 0.5, y: 0.5}
   m_AnchorMax: {x: 0.5, y: 0.5}
-  m_AnchoredPosition: {x: 815.8, y: -543.7}
+  m_AnchoredPosition: {x: 818, y: -535}
   m_SizeDelta: {x: 240.38507, y: 68.53432}
   m_Pivot: {x: 0.5, y: 0.5}
 --- !u!1001 &3479225815936287276
@@ -18181,7 +18181,7 @@ MonoBehaviour:
   m_Name: 
   m_EditorClassIdentifier: 
   m_Material: {fileID: 0}
-  m_Color: {r: 0.38679248, g: 0.38679248, b: 0.38679248, a: 1}
+  m_Color: {r: 0, g: 0, b: 0, a: 0.8627451}
   m_RaycastTarget: 1
   m_RaycastPadding: {x: 0, y: 0, z: 0, w: 0}
   m_Maskable: 1
@@ -18605,7 +18605,7 @@ MonoBehaviour:
   m_Name: 
   m_EditorClassIdentifier: 
   m_Material: {fileID: 0}
-  m_Color: {r: 0.4433962, g: 0.4433962, b: 0.4433962, a: 1}
+  m_Color: {r: 0, g: 0, b: 0, a: 1}
   m_RaycastTarget: 1
   m_RaycastPadding: {x: 0, y: 0, z: 0, w: 0}
   m_Maskable: 1
@@ -19102,7 +19102,7 @@ MonoBehaviour:
   m_Name: 
   m_EditorClassIdentifier: 
   m_Material: {fileID: 0}
-  m_Color: {r: 0.5754717, g: 0.5754717, b: 0.5754717, a: 1}
+  m_Color: {r: 0, g: 0, b: 0, a: 1}
   m_RaycastTarget: 1
   m_RaycastPadding: {x: 0, y: 0, z: 0, w: 0}
   m_Maskable: 1
