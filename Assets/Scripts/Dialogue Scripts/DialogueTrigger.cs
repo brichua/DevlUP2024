@@ -23,13 +23,14 @@ public class DialogueTrigger : MonoBehaviour
     public bool in_dialogue;
     public bool trigger;
 
+
     // public bool useCollision; // unused for now
     //Differentiate between the NPCs
     public GameObject NPC;
     string path = "Assets/Scripts/Dialogue Scripts/Dialogue Text.txt";
     public NPC_Manager NPC_Manager;
-
-    //Interctible Sprite
+    public Player player;
+    //Interactible Sprite
     public GameObject interactible_sprite;
 
     private void Start()
@@ -641,6 +642,8 @@ public class DialogueTrigger : MonoBehaviour
             }
         }
         AssetDatabase.Refresh();
+        player.CheckInteraction(charName, moodState);
+
     }
 
     private void OnTriggerEnter2D(Collider2D other)
