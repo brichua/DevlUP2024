@@ -15,7 +15,7 @@ public class Herbs : Interactable
         "But look at what awaits us outside. So much space! Why would we waste away in caves like these?",
         "They will get angry at us if we go outside, did you not hear of what happened to Asmanda’ha? ",
         "Yeah, but he just didn’t do it right. I’m telling you, we just need to lay a foundation and get the blessing of one of the Stone Gods.",
-        "How do you plan on doing that? They hate us for what we did centuries ago, you would be lucky to get the blessing of even a foul devil."
+        "How do you plan on doing that? They hate us for what we did centuries ago, you would be lucky to get the blessing of even a foul devil.",
         "SJIBFVGDSBFHKDSJABHKAAFREWJ.",
         "What was that!?",
         "Mmmmnnnsshhhhh, a blessing you say?",
