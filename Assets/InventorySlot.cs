@@ -8,6 +8,7 @@ public class InventorySlot : MonoBehaviour
     public Image icon;
     Resource resource;
     public Button itemButton;
+    
 
     public void AddItem(Resource newItem)
     {
@@ -23,6 +24,7 @@ public class InventorySlot : MonoBehaviour
         icon.sprite = null; 
         icon.enabled = false;
         itemButton.interactable = false;
+        
     } 
 
     public void OnRemoveButton()

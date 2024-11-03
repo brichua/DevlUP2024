@@ -10,6 +10,7 @@ public class Inventory_UI : MonoBehaviour
     Inventory inventory;
 
     InventorySlot[] slots;
+     
     // Start is called before the first frame update
     void Start()
     {
@@ -42,4 +43,7 @@ public class Inventory_UI : MonoBehaviour
             }
         }
     }
+
+
+
 }

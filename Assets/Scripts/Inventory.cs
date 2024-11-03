@@ -1,7 +1,11 @@
 using System.Collections;
 using System.Collections.Generic;
+using TMPro;
 using Unity.VisualScripting;
 using UnityEngine;
+using UnityEngine.Experimental.Rendering;
+using UnityEngine.UI;
+using TMPro;
 
 public class Inventory : MonoBehaviour
 {
@@ -26,6 +30,10 @@ public class Inventory : MonoBehaviour
 
     public List<Resource> resources = new List<Resource>();
 
+    public TextMeshProUGUI infoText;
+    
+    
+
     public bool Add (Resource resource)
     { 
         if(resources.Count >= space)
@@ -34,6 +42,7 @@ public class Inventory : MonoBehaviour
             return false;
         }
         resources.Add(resource);
+        StartCoroutine(updateInfo(resource.name));
         statUpdate(resource,1);
         if(onItemChangedCallBack !=null)
         {
@@ -106,6 +115,16 @@ public class Inventory : MonoBehaviour
         }
         
         
+    }
+
+    private IEnumerator updateInfo(string text)
+    {
+        
+        Debug.Log(infoText.text);
+    
+        infoText.text = "Picked up " + text;
+        yield return new WaitForSeconds(2);
+        infoText.text = "Press [N] to Open Inventory";
     }
 }
 /*
