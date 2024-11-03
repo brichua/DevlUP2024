@@ -2413,6 +2413,9 @@ MonoBehaviour:
   startButton: {fileID: 1129688332}
   messageText: {fileID: 2051998542}
   messageText2: {fileID: 1427134385}
+  book: {fileID: 0}
+  player: {fileID: 0}
+  bar: {fileID: 0}
   messages:
   - "Ugh, this is so boring. Why can\u2019t I just hang out with my friends today?"
   - Have some respect, Evelyn. I know this seems boring, but it is very important
@@ -4778,7 +4781,7 @@ Canvas:
   m_Enabled: 1
   serializedVersion: 3
   m_RenderMode: 1
-  m_Camera: {fileID: 0}
+  m_Camera: {fileID: 1977767834}
   m_PlaneDistance: 100
   m_PixelPerfect: 0
   m_ReceivesEvents: 1
@@ -11499,7 +11502,7 @@ GameObject:
   m_Icon: {fileID: 0}
   m_NavMeshLayer: 0
   m_StaticEditorFlags: 0
-  m_IsActive: 1
+  m_IsActive: 0
 --- !u!114 &1537633633
 MonoBehaviour:
   m_ObjectHideFlags: 0
@@ -13876,6 +13879,7 @@ MonoBehaviour:
   m_Script: {fileID: 11500000, guid: 28667814993303a44aef2bdf138d923b, type: 3}
   m_Name: 
   m_EditorClassIdentifier: 
+  audioSource: {fileID: 0}
   fluteMusic: {fileID: 0}
   ominousMusic: {fileID: 0}
   horrorMusic: {fileID: 0}
@@ -13891,13 +13895,13 @@ AudioSource:
   OutputAudioMixerGroup: {fileID: 0}
   m_audioClip: {fileID: 8300000, guid: 8d5d581ccd1c8034f8e18b85c3cea8fa, type: 3}
   m_PlayOnAwake: 1
-  m_Volume: 1
+  m_Volume: 0.434
   m_Pitch: 1
   Loop: 0
   Mute: 0
   Spatialize: 0
   SpatializePostEffects: 0
-  Priority: 128
+  Priority: 120
   DopplerLevel: 1
   MinDistance: 1
   MaxDistance: 500
@@ -14151,20 +14155,20 @@ CompositeCollider2D:
   m_ColliderPaths:
   - m_Collider: {fileID: 1854675018}
     m_ColliderPaths:
-    - - X: 32879618
-        Y: 33091328
-      - X: -33091326
-        Y: 33091328
-      - X: -33091326
-        Y: -19117792
-      - X: 32879618
-        Y: -19117792
+    - - X: 41737172
+        Y: 42005916
+      - X: -42005916
+        Y: 42005916
+      - X: -42005916
+        Y: -24268000
+      - X: 41737172
+        Y: -24268000
   m_CompositePaths:
     m_Paths:
-    - - {x: 3.2879324, y: -1.9117792}
-      - {x: 3.2879324, y: 3.3091328}
-      - {x: -3.3091326, y: 3.3091037}
-      - {x: -3.3091033, y: -1.9117792}
+    - - {x: 4.173688, y: -2.4268}
+      - {x: 4.173688, y: 4.2005916}
+      - {x: -4.2005916, y: 4.2005625}
+      - {x: -4.2005625, y: -2.4268}
   m_VertexDistance: 0.0005
   m_OffsetDistance: 0.00005
   m_UseDelaunayMesh: 0
@@ -16852,6 +16856,7 @@ MonoBehaviour:
   trigger: 0
   NPC: {fileID: 3570272404645302425}
   NPC_Manager: {fileID: 5036969313797991078}
+  player: {fileID: 0}
   interactible_sprite: {fileID: 1695968198359321396}
 --- !u!1 &1324410748266338592
 GameObject:
@@ -17012,6 +17017,7 @@ MonoBehaviour:
   trigger: 0
   NPC: {fileID: 3847778437050104056}
   NPC_Manager: {fileID: 4687333692849046215}
+  player: {fileID: 0}
   interactible_sprite: {fileID: 1397070092555330389}
 --- !u!212 &1678684148316260134
 SpriteRenderer:
@@ -17119,6 +17125,7 @@ MonoBehaviour:
   trigger: 0
   NPC: {fileID: 3775192193037075085}
   NPC_Manager: {fileID: 4615875701645916338}
+  player: {fileID: 0}
   interactible_sprite: {fileID: 1324410748266338592}
 --- !u!114 &1819149655867778905
 MonoBehaviour:
@@ -18714,6 +18721,7 @@ MonoBehaviour:
   trigger: 0
   NPC: {fileID: 5246203900042072656}
   NPC_Manager: {fileID: 4369773206634850415}
+  player: {fileID: 0}
   interactible_sprite: {fileID: 7983526871165078013}
 --- !u!212 &7773650271752886267
 SpriteRenderer:
