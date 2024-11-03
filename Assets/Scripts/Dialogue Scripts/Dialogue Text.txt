@@ -1,12 +1,12 @@
-[NAME=Ocetire Sakoru][SPEAKERSPRITE=Ocetire Sakoru]Well, if it isn’t our local stick and stones collector!
-[NAME=Evelyn][SPEAKERSPRITE=Evelyn]I'd roast you back, but I don’t want you to burn like your last batch of cookies.
-[NAME=Ocetire Sakoru][SPEAKERSPRITE=Ocetire Sakoru]Hey, that’s a bit much, hehehe.
-[NAME=Ocetire Sakoru][SPEAKERSPRITE=Ocetire Sakoru]How goes lighting up the flames or whatever you do.
-[NAME=Evelyn][SPEAKERSPRITE=Evelyn]Oh, you know, the usual, go blah blah blah with my rituals, or whatnot. It’s so repetitive these days
-[NAME=Ocetire Sakoru][SPEAKERSPRITE=Ocetire Sakoru]Sounds like someone is always lazing about and whining.
-[NAME=Evelyn][SPEAKERSPRITE=Evelyn]I get so much free time though. You wish you had as much as me.
-[NAME=Ocetire Sakoru][SPEAKERSPRITE=Ocetire Sakoru]Oh, womp womp. You wanna go get food together later today?
-[NAME=Evelyn][SPEAKERSPRITE=Evelyn]I’d be down! Should we go to Maurice’s place this time?
-[NAME=Ocetire Sakoru][SPEAKERSPRITE=Ocetire Sakoru]Yeah, we should! I’ve heard good things about her place. Still can’t compete with my sweets though.
-[NAME=Evelyn][SPEAKERSPRITE=Evelyn]Let’s see about that. I’ll have your specialty then.
-[NAME=Ocetire Sakoru][SPEAKERSPRITE=Ocetire Sakoru]One coming up lazy pyromancer!
+[NAME=Evelyn][SPEAKERSPRITE=Evelyn]Hello Mr. Bayers, how’s your day going?
+[NAME=Gorgui Bayers][SPEAKERSPRITE=Gorgui Bayers]Ahhhh, nothing compared to my former days, young Evelyn. Those days of policing are behind me, I’m enjoying my more relaxed life.
+[NAME=Evelyn][SPEAKERSPRITE=Evelyn]You volunteer at Brancia’s Cat Shelter now, don’t you?
+[NAME=Gorgui Bayers][SPEAKERSPRITE=Gorgui Bayers]Yes, I do! Those tiny little critters are some troublemakers sometimes. Trying to herd them away from their litter boxes to clean them does a number on my frail bones!
+[NAME=Evelyn][SPEAKERSPRITE=Evelyn]Awwwww, I’m sure they make up for it with their cuteness though. I wish I could volunteer there if I had time.
+[NAME=Gorgui Bayers][SPEAKERSPRITE=Gorgui Bayers]Ohhh, your time will come eventually young Evelyn. You can find happiness in any job though, just gotta put your back into it.
+[NAME=Evelyn][SPEAKERSPRITE=Evelyn]Yeah, I’m trying. For now, there’s nothing too interesting about keeping the fire lit. But hey, at least it’s decently easy.
+[NAME=Gorgui Bayers][SPEAKERSPRITE=Gorgui Bayers]Well, it could be worse. Could be a hard job that you hate.
+[NAME=Gorgui Bayers][SPEAKERSPRITE=Gorgui Bayers]Oh, I forgot I have my juice tasting panel tomorrow. I have to start getting ready for that.
+[NAME=Gorgui Bayers][SPEAKERSPRITE=Gorgui Bayers]Take care young Evelyn. Make sure to stay out of trouble. You’re still very young after all!
+[NAME=Evelyn][SPEAKERSPRITE=Evelyn]Thank you Mr. Bayer, you too!
+[NAME=Evelyn][SPEAKERSPRITE=Evelyn]I mean the take care part, not the stay out of trouble part, whoops.
